@@ -21,14 +21,17 @@ in
     };
     xdg.portal.enable = true;
 
+
+    # Enables program (aka setups everything after install for NixOS)
     programs.steam = {
         enable = true;
         dedicatedServer.openFirewall = false;
     };
-
     programs.nix-ld.enable = true;
+    programs.zsh.enable = true;
 
-
+    # All packages I need
+    # May add more packages in near future
     environment.systemPackages = (with pkgs;
     [
         adw-gtk3
@@ -42,8 +45,14 @@ in
         btop
         fastfetch
         zsh
+        # I select unstable for youtube-music
+        # just to remove an annoying insecure dependency (electron 24 is EOL smh)
         unstable.youtube-music
-    ]) ++ (with pkgs.gnomeExtensions;
+    ])
+    # GNOME Extensions
+    # Why do I have to go to gnome extensions to install
+    # when you have this kind declaratively :3
+    ++ (with pkgs.gnomeExtensions;
     [
         extension-list
         blur-my-shell
@@ -54,12 +63,13 @@ in
         vitals
         desktop-cube
         window-is-ready-remover
-        x11-gestures
+        x11-gestures # because yes
         media-controls
         status-area-horizontal-spacing
     ]);
 
     services.xserver.excludePackages = with pkgs; [
+        # idk I don't need xterm
         xterm
     ];
 

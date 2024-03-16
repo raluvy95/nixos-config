@@ -1,3 +1,5 @@
+# Nix variant of config.jsonc
+
 {
   general.multithreading = true;
   modules = [

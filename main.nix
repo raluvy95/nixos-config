@@ -2,7 +2,7 @@
 
 {config, pkgs, lib, ...}:
 {
-
+    # imports from all other directories
     imports = [
         ./user.nix
         ./home-manager.nix
@@ -11,6 +11,4 @@
         ./firewall.nix
         ./nvidia.nix
     ];
-
-    programs.zsh.enable = true;
 }

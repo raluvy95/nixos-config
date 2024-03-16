@@ -1,5 +1,6 @@
 {config, pkgs, ...}:
-
+# Firewall configuration
+# Better than configuring via iptables and such
 {
     networking.firewall = {
         enable = true;

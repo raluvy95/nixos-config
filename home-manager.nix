@@ -3,6 +3,8 @@
 {config, pkgs, ...}:
 
 {
+    # Home manager
+    # Here lies the stuff you may or may need here
     home-manager.users.cat = { pkgs, ... }: {
         home.packages = with pkgs; [
             vscode
@@ -12,6 +14,7 @@
         # never touch this
         home.stateVersion = "23.11";
         
+        # yes
         dconf.settings = {
             "org/gnome/desktop/interface" = {
                 color-schene = "prefer-dark";
@@ -38,6 +41,8 @@
                     theme = "robbyrussell";
                 };
 
+                # The default zsh for NixOS doesn't have this kind of functionality
+                # So I had to add arrow-up and arrow-down for this
                 initExtra = ''
                 bindkey "''${key[Up]}" up-line-or-search
                 bindkey "''${key[Down]}" down-line-or-search
@@ -45,8 +50,10 @@
             };
         };
 
-       home.file = import ./config.nix;
+        # More configurations can be found in config.nix
+        home.file = import ./config.nix;
     };
 
+    # idk what to do
     home-manager.useGlobalPkgs = true;
 }

@@ -3,6 +3,8 @@
 {config, pkgs, ...}:
 
 {
+    # My user configuraton
+    # simpler :3 
     users.users.cat = {
         isNormalUser = true;
         description = "cat";
