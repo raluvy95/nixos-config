@@ -1,5 +1,7 @@
 {config, pkgs, lib, ...}: 
-
+let
+    unstable = import <nixos-unstable> { config = { allowUnfree = true; };};
+in
 {
     nixpkgs.config = {
         allowUnfree = true;
@@ -26,6 +28,7 @@
         btop
         fastfetch
         zsh
+        unstable.youtube-music
     ]) ++ (with pkgs.gnomeExtensions;
     [
         extension-list
