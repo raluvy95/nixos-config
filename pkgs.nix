@@ -1,3 +1,6 @@
+# pkgs.nix - the file with list of packages, services and fonts
+# Most of software are installed via system-wide because I only have one account lol
+
 {config, pkgs, lib, ...}: 
 let
     unstable = import <nixos-unstable> { config = { allowUnfree = true; };};
@@ -17,6 +20,14 @@ in
         implementation = "broker";
     };
     xdg.portal.enable = true;
+
+    programs.steam = {
+        enable = true;
+        dedicatedServer.openFirewall = false;
+    };
+
+    programs.nix-ld.enable = true;
+
 
     environment.systemPackages = (with pkgs;
     [
