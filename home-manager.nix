@@ -24,6 +24,12 @@
                 package = pkgs.gnome.gnome-themes-extra;
             };
         };
+
+        programs.git = {
+            enable = true;
+            userName = "raluvy95";
+            # no email for you lol
+        };
     };
 
     home-manager.useGlobalPkgs = true;
