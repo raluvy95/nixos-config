@@ -11,7 +11,6 @@
             firefox
             telegram-desktop
             thefuck
-            fira-code-nerdfont
         ];
     };
 

@@ -43,4 +43,13 @@
     services.xserver.excludePackages = with pkgs; [
         xterm
     ];
+
+    fonts = {
+        packages = with pkgs; [
+            noto-fonts-emoji
+            noto-fonts-cjk
+            noto-fonts
+            fira-code-nerdfont
+        ];
+    };
 }
