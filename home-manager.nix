@@ -14,7 +14,10 @@
         home.stateVersion = "23.11";
         
         dconf.settings = {
-            "org/gnome/desktop/interface" = { color-schene = "prefer-dark"; };
+            "org/gnome/desktop/interface" = {
+                color-schene = "prefer-dark";
+                clock-show-seconds = true;
+            };
         };
 
         programs = { 
