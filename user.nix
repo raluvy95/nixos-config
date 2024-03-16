@@ -8,8 +8,12 @@
         description = "cat";
         extraGroups = ["networkmanager" "wheel"];
         packages = with pkgs; [
-        firefox
-        telegram-desktop
+            firefox
+            telegram-desktop
+            thefuck
+            fira-code-nerdfont
         ];
     };
+
+    users.defaultUserShell = pkgs.zsh;
 }

@@ -25,6 +25,7 @@
         git
         btop
         fastfetch
+        zsh
     ]) ++ (with pkgs.gnomeExtensions;
     [
         extension-list

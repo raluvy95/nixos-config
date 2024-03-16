@@ -11,4 +11,6 @@
         ./firewall.nix
         ./nvidia.nix
     ];
+
+    programs.zsh.enable = true;
 }

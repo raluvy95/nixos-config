@@ -17,19 +17,33 @@
             "org/gnome/desktop/interface" = { color-schene = "prefer-dark"; };
         };
 
-        gtk = {
-            enable = true;
-            theme = {
-                name = "Adwaita-dark";
-                package = pkgs.gnome.gnome-themes-extra;
+        programs = { 
+            git = {
+                enable = true;
+                userName = "raluvy95";
+                # no email for you lol
+            };
+
+            zsh = {
+                enable = true;
+                enableCompletion = true;
+                enableAutosuggestions = true;
+                syntaxHighlighting.enable = true;
+
+                oh-my-zsh = {
+                    enable = true;
+                    plugins = [ "git" "thefuck" ];
+                    theme = "robbyrussell";
+                };
+
+                initExtra = ''
+                bindkey "''${key[Up]}" up-line-or-search
+                bindkey "''${key[Down]}" down-line-or-search
+                '';
             };
         };
 
-        programs.git = {
-            enable = true;
-            userName = "raluvy95";
-            # no email for you lol
-        };
+       home.file = import ./config.nix;
     };
 
     home-manager.useGlobalPkgs = true;
