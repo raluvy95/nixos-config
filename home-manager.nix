@@ -5,7 +5,6 @@
 {
     home-manager.users.cat = { pkgs, ... }: {
         home.packages = with pkgs; [
-            discord
             vscode
         ];
 

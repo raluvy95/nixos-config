@@ -22,6 +22,9 @@ in
     [
         adw-gtk3
         krita
+        (discord.override {
+            withOpenASAR = true;
+        })
         libappindicator-gtk3
         libappindicator-gtk2
         git
@@ -41,6 +44,8 @@ in
         desktop-cube
         window-is-ready-remover
         x11-gestures
+        media-controls
+        status-area-horizontal-spacing
     ]);
 
     services.xserver.excludePackages = with pkgs; [
