@@ -34,17 +34,21 @@ in
     # May add more packages in near future
     environment.systemPackages = (with pkgs;
     [
+        # list of STABLE packages (23.11)
         adw-gtk3
         krita
         (discord.override {
             withOpenASAR = true;
         })
-        libappindicator-gtk3
+        libappindicator
         libappindicator-gtk2
         git
         btop
         fastfetch
         zsh
+        file # why is file not included by default????????????????????
+
+        # list of UNSTABLE packages 
         # I select unstable for youtube-music
         # just to remove an annoying insecure dependency (electron 24 is EOL smh)
         unstable.youtube-music
@@ -68,10 +72,24 @@ in
         status-area-horizontal-spacing
     ]);
 
+    # neeeded for appindicator idk
+    services.udev.packages = with pkgs; [
+        gnome.gnome-settings-daemon
+    ];
+
     services.xserver.excludePackages = with pkgs; [
         # idk I don't need xterm
         xterm
     ];
+
+    # Useless packages for me
+    environment.gnome.excludePackages = (with pkgs; [
+        gnome-tour
+    ]) ++ (with pkgs.gnome; [
+        gnome-music
+        epiphany
+        geary
+    ]);
 
     fonts = {
         packages = with pkgs; [

@@ -10,7 +10,7 @@
     "break"
     {
       type = "os";
-      key = "  ";
+      key = "  󱄅";
     }
     {
       type = "kernel";
