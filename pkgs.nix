@@ -53,8 +53,6 @@ in
         # I select unstable for youtube-music
         # just to remove an annoying insecure dependency (electron 24 is EOL smh)
         unstable.youtube-music
-        # does not exist on stable
-        unstable.morewaita-icon-theme
         unstable.prismlauncher-qt5
     ])
     # GNOME Extensions
