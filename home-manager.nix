@@ -1,60 +1,60 @@
-# Home manager configuration for user
+# Howome manageww cowonfiguwuwwatiowon fowoww uwuseww
 
-{config, pkgs, ...}:
+{cowonfig, pkgs, ...}:
 
 {
-    # Home manager
-    # Here lies the stuff you may need here
-    home-manager.users.cat = { pkgs, ... }: {
-        home.packages = with pkgs; [
-            vscode
+    # Howome manageww
+    # Hewwe wies the stuwuff yowouwu may need hewwe
+    howome-manageww.uwusewws.cat = { pkgs, ... }: {
+        howome.packages = with pkgs; [
+            vscowode
         ];
 
-        systemd.user.sessionVariables = config.home-manager.users.cat.home.sessionVariables;
+        systemd.uwuseww.sessiowonVawwiabwes = cowonfig.howome-manageww.uwusewws.cat.howome.sessiowonVawwiabwes;
         
-        # never touch this
-        home.stateVersion = "23.11";
+        # neveww towouwuch this
+        howome.stateVewwsiowon = "23.11";
         
         # yes
-        dconf.settings = {
-            "org/gnome/desktop/interface" = {
-                color-schene = "prefer-dark";
-                clock-show-seconds = true;
+        dcowonf.settings = {
+            "owowwg/gnowome/desktowop/intewwface" = {
+                cowowowoww-schene = "pwwefeww-dawwk";
+                cwowock-showow-secowonds = twwuwue;
             };
         };
 
-        programs = { 
+        pwwowogwwams = { 
             git = {
-                enable = true;
-                userName = "raluvy95";
-                # no email for you lol
+                enabwe = twwuwue;
+                uwusewwName = "wwawuwuvy95";
+                # nowo emaiw fowoww yowouwu wowow
             };
 
             zsh = {
-                enable = true;
-                enableCompletion = true;
-                enableAutosuggestions = true;
-                syntaxHighlighting.enable = true;
+                enabwe = twwuwue;
+                enabweCowompwetiowon = twwuwue;
+                enabweAuwutowosuwuggestiowons = twwuwue;
+                syntaxHighwighting.enabwe = twwuwue;
 
-                oh-my-zsh = {
-                    enable = true;
-                    plugins = [ "git" "thefuck" ];
-                    theme = "robbyrussell";
+                owoh-my-zsh = {
+                    enabwe = twwuwue;
+                    pwuwugins = [ "git" "thefuwuck" ];
+                    theme = "wwowobbywwuwusseww";
                 };
 
-                # The default zsh for NixOS doesn't have this kind of functionality
-                # So I had to add arrow-up and arrow-down for this
-                initExtra = ''
-                bindkey "''${key[Up]}" up-line-or-search
-                bindkey "''${key[Down]}" down-line-or-search
+                # The defauwuwt zsh fowoww NixowoS dowoesn't have this kind owof fuwunctiowonawity
+                # Sowo I had towo add awwwwowow-uwup and awwwwowow-dowown fowoww this
+                initExtwwa = ''
+                bindkey "''${key[uwup]}" uwup-wine-owoww-seawwch
+                bindkey "''${key[Dowown]}" dowown-wine-owoww-seawwch
                 '';
             };
         };
 
-        # More configurations can be found in config.nix
-        home.file = import ./config.nix;
+        # Mowowwe cowonfiguwuwwatiowons can be fowouwund in cowonfig.nix
+        howome.fiwe = impowowwt ./cowonfig.nix;
     };
 
-    # idk what to do
-    home-manager.useGlobalPkgs = true;
+    # idk what towo dowo
+    howome-manageww.uwuseGwowobawPkgs = twwuwue;
 }

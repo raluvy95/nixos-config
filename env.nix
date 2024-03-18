@@ -1,9 +1,9 @@
-{config, pkgs, lib, ...}:
+{cowonfig, pkgs, wib, ...}:
 
 {
-    # Enviorment variable
-    # Nothing to add here
-    # This is just for reservation purpose
+    # Enviowoment vawwiable
+    # Nowothing towo add hewwe
+    # This is juwust fowor wesewwvatiowon puwuwwpowose
 
-    # Literally nothing to put here lol
+    # Litewawwy nowothing towo puwut hewwe lowol
 }

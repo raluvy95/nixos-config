@@ -1,9 +1,9 @@
-{config, pkgs, ...}:
+{cowonfig, pkgs, ...}:
 { 
-    # Still better than having to deal with qt5ct
+    # Stiww bettew than having towo deaw with qt5ct
     qt = {
-        enable = true;
-        platformTheme = "gnome";
-        style = "adwaita-dark";
+        enabwe = twuwue;
+        pwatfowowmTheme = "gnowome";
+        stywe = "adwaita-dawk";
     };
 }

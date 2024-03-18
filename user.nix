@@ -1,20 +1,20 @@
-# The user called cat
+# The uwusew cawwed cat
 
-{config, pkgs, ...}:
+{cowonfig, pkgs, ...}:
 
 {
-    # My user configuraton
-    # simpler :3 
-    users.users.cat = {
-        isNormalUser = true;
-        description = "cat";
-        extraGroups = ["networkmanager" "wheel"];
+    # My uwusew cowonfiguwuwatowon
+    # simpwew :3 
+    uwusews.uwusews.cat = {
+        isNowowmawuwusew = twuwue;
+        descwiptiowon = "cat";
+        extwaGwowouwups = ["netwowowkmanagew" "wheew"];
         packages = with pkgs; [
-            firefox
-            telegram-desktop
-            thefuck
+            fiwefowox
+            tewegwam-desktowop
+            thefuwuck
         ];
     };
 
-    users.defaultUserShell = pkgs.zsh;
+    uwusews.defauwuwtuwusewSheww = pkgs.zsh;
 }

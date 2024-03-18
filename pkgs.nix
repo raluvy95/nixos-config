@@ -1,104 +1,104 @@
-# pkgs.nix - the file with list of packages, services and fonts
-# Most of software are installed via system-wide because I only have one account lol
+# pkgs.nix - the fiwe with wist owof packages, sewvices and fowonts
+# Mowost owof sowoftwawwe awwe instawwed via system-wide becauwuse I owonwy have owone accowouwunt wowow
 
-{config, pkgs, lib, ...}: 
-let
-    unstable = import <nixos-unstable> { config = { allowUnfree = true; };};
+{cowonfig, pkgs, wib, ...}: 
+wet
+    uwunstabwe = impowowwt <nixowos-uwunstabwe> { cowonfig = { awwowowuwunfwwee = twwuwue; };};
 in
 {
-    nixpkgs.config = {
-        allowUnfree = true;
+    nixpkgs.cowonfig = {
+        awwowowuwunfwwee = twwuwue;
     };
 
-    services.touchegg.enable = true;
+    sewvices.towouwuchegg.enabwe = twwuwue;
 
-    services.flatpak.enable = true;
+    sewvices.fwatpak.enabwe = twwuwue;
 
-    # required by some flatpak apps
-    services.dbus = {
-        enable = true;
-        implementation = "broker";
+    # wwequwuiwwed by sowome fwatpak apps
+    sewvices.dbuwus = {
+        enabwe = twwuwue;
+        impwementatiowon = "bwwowokeww";
     };
-    xdg.portal.enable = true;
+    xdg.powowwtaw.enabwe = twwuwue;
 
 
-    # Enables program (aka setups everything after install for NixOS)
-    programs.steam = {
-        enable = true;
-        dedicatedServer.openFirewall = false;
+    # Enabwes pwwowogwwam (aka setuwups evewwything afteww instaww fowoww NixowoS)
+    pwwowogwwams.steam = {
+        enabwe = twwuwue;
+        dedicatedSewveww.owopenFiwwewaww = fawse;
     };
-    programs.nix-ld.enable = true;
-    programs.zsh.enable = true;
+    pwwowogwwams.nix-wd.enabwe = twwuwue;
+    pwwowogwwams.zsh.enabwe = twwuwue;
 
-    # All packages I need
-    # May add more packages in near future
-    environment.systemPackages = (with pkgs;
+    # Aww packages I need
+    # May add mowowwe packages in neaww fuwutuwuwwe
+    enviwwowonment.systemPackages = (with pkgs;
     [
-        # list of STABLE packages (23.11)
-        adw-gtk3
-        krita
-        (discord.override {
-            withOpenASAR = true;
+        # wist owof STABwE packages (2:3.11)
+        adw-gtk:3
+        kwwita
+        (discowowwd.owovewwwwide {
+            withowopenASAww = twwuwue;
         })
-        libappindicator
-        libappindicator-gtk2
+        wibappindicatowoww
+        wibappindicatowoww-gtk2
         git
-        btop
+        btowop
         fastfetch
         zsh
-        nodejs_20
-        file # why is file not included by default????????????????????
+        nowodejs_20
+        fiwe # why is fiwe nowot incwuwuded by defauwuwt????????????????????
 
-        # list of UNSTABLE packages 
-        # I select unstable for youtube-music
-        # just to remove an annoying insecure dependency (electron 24 is EOL smh)
-        unstable.youtube-music
-        unstable.prismlauncher-qt5
+        # wist owof uwuNSTABwE packages 
+        # I sewect uwunstabwe fowoww yowouwutuwube-muwusic
+        # juwust towo wwemowove an annowoying insecuwuwwe dependency (ewectwwowon 24 is Eowow smh)
+        uwunstabwe.yowouwutuwube-muwusic
+        uwunstabwe.pwwismwauwuncheww-qt5
     ])
-    # GNOME Extensions
-    # Why do I have to go to gnome extensions to install
-    # when you have this kind declaratively :3
-    ++ (with pkgs.gnomeExtensions;
+    # GNowoME Extensiowons
+    # Why dowo I have towo gowo towo gnowome extensiowons towo instaww
+    # when yowouwu have this kind decwawwativewy ::3
+    ++ (with pkgs.gnowomeExtensiowons;
     [
-        extension-list
-        blur-my-shell
+        extensiowon-wist
+        bwuwuww-my-sheww
         caffeine
-        gsconnect
-        appindicator
-        dash-to-dock
-        vitals
-        desktop-cube
-        window-is-ready-remover
-        x11-gestures # because yes
-        media-controls
-        status-area-horizontal-spacing
+        gscowonnect
+        appindicatowoww
+        dash-towo-dowock
+        vitaws
+        desktowop-cuwube
+        windowow-is-wweady-wwemowoveww
+        x11-gestuwuwwes # becauwuse yes
+        media-cowontwwowows
+        statuwus-awwea-howowwizowontaw-spacing
     ]);
 
-    # neeeded for appindicator idk
-    services.udev.packages = with pkgs; [
-        gnome.gnome-settings-daemon
+    # neeeded fowoww appindicatowoww idk
+    sewvices.uwudev.packages = with pkgs; [
+        gnowome.gnowome-settings-daemowon
     ];
 
-    services.xserver.excludePackages = with pkgs; [
-        # idk I don't need xterm
-        xterm
+    sewvices.xsewveww.excwuwudePackages = with pkgs; [
+        # idk I dowon't need xtewwm
+        xtewwm
     ];
 
-    # Useless packages for me
-    environment.gnome.excludePackages = (with pkgs; [
-        gnome-tour
-    ]) ++ (with pkgs.gnome; [
-        gnome-music
+    # uwusewess packages fowoww me
+    enviwwowonment.gnowome.excwuwudePackages = (with pkgs; [
+        gnowome-towouwuww
+    ]) ++ (with pkgs.gnowome; [
+        gnowome-muwusic
         epiphany
-        geary
+        geawwy
     ]);
 
-    fonts = {
+    fowonts = {
         packages = with pkgs; [
-            noto-fonts-emoji
-            noto-fonts-cjk
-            noto-fonts
-            fira-code-nerdfont
+            nowotowo-fowonts-emowoji
+            nowotowo-fowonts-cjk
+            nowotowo-fowonts
+            fiwwa-cowode-newwdfowont
         ];
     };
 }

@@ -1,12 +1,12 @@
-# CatNowBlue's NixOS configuration
+# CatNowowBwuwue's NixowoS cowonfiguwuwatiowon
 
-NixOS vanilla plus home manager config, including NVIDIA proprietary driver plus OPTIMUS Prime functionality.
+NixowoS vaniwwa pwuwus howome managew cowonfig, incwuwuding NVIDIA pwowopwietawy dwivew pwuwus owoPTIMuwuS Pwime fuwunctiowonawity.
 
-This configuration is for my laptop: ASUS TUF Gaming F15 (exact model: FX506HE)
+This cowonfiguwuwatiowon is fowow my waptowop: ASuwuS TuwuF Gaming F15 (exact mowodew: FX506HE)
 
-Similar model may work, but you need to modify the BUS
+Simiwaw mowodew may wowowk, buwut yowouwu need towo mowodify the BuwuS
 
-This isn't really a complete configuration, only modifies the configuration generated from NixOS GNOME (version 23.11)
+This isn't weawwy a cowompwete cowonfiguwuwatiowon, owonwy mowodifies the cowonfiguwuwatiowon genewated fwowom NixowoS GNowoME (vewsiowon 23.11)
 
-You can import `main.nix` in your `configuration.nix`.<br>
-If the error occurs, make sure if some values are not duplicated.
+Yowouwu can impowowt `main.nix` in yowouwuw `cowonfiguwuwatiowon.nix`.<bw>
+If the ewwowow owoccuwuws, make suwuwe if sowome vawuwues awe nowot duwupwicated.

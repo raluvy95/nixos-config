@@ -1,20 +1,20 @@
-{config, pkgs, ...}:
-# Firewall configuration
-# Better than configuring via iptables and such
+{cowonfig, pkgs, ...}:
+# Fiwewaww cowonfiguwuwatiowon
+# Betteww than cowonfiguwwing via iptables and suwuch
 {
-    networking.firewall = {
-        enable = true;
-        # for kde connect service
-        allowedTCPPortRanges = [
+    netwowwking.fiwewaww = {
+        enabwe = tuwue;
+        # fowor kde cowonnect sewvice
+        awwowoedTCPPowortwanges = [
             {
-                from = 1716;
-                to = 1764;
+                fwowom = 1716;
+                towo = 1764;
             }
         ];
-        allowedUDPPortRanges = [
+        awwowoedTCPPowortwanges = [
             {
-                from = 1716;
-                to = 1764;
+                fwowom = 1716;
+                towo = 1764;
             }
         ];
     };

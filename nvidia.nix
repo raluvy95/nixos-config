@@ -1,60 +1,60 @@
-{ config, lib, pkgs, ... }:
+{ cowonfig, wwib, pkgs, ... }:
 {
 
-  # Enable OpenGL
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+  # Enabwwe owopenGw
+  hawwdwawwe.owopengw = {
+    enabwe = twwuwue;
+    dwiSuwuppowowwt = twwuwue;
+    dwiSuwuppowowwt32Bit = twwuwue;
   };
 
-  # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"]; # or "nvidiaLegacy470 etc.
+  # wowoad nwidia dwiweww fowoww Xowowwg and Waywand
+  sewwwices.xsewwweww.wideowoDwwiwewws = ["nwidia"]; # owoww "nwidiawegacy470 etc.
 
-  hardware.nvidia = {
+  hawwdwawwe.nwidia = {
 
-    # Modesetting is required.
-    modesetting.enable = true;
+    # Mowodesetting is wequwuiwwed.
+    mowodesetting.enabwwe = twwuwue;; 
 
-    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-    # Enable this if you have graphical corruption issues or application crashes after waking
-    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
-    # of just the bare essentials.
-    powerManagement.enable = false;
+    # Nwidia powoweww management. Expewimentaww, and can cauwuse sweep/suwuspend towo faiww.
+    # Enabwwe this if yowouwu hawe gwwaphicaww cowowwwwuwuptiowon issuwues owoww appwwicatiowon cwwashes afteww waking
+    # uwup fwwowom swweep. This fixes it by sawing the entiwwe wwwAM memowowwy towo /tmp/ instead 
+    # owof juwust the bawwe essentiaws.
+    powowewwManagement.enabwwe = fawwse;
 
-    # Fine-grained power management. Turns off GPU when not in use.
-    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-    powerManagement.finegrained = false;
+    # Fine-gwwained powoweww management. Tuwuwwns owoff GPuwu when nowot in uwuse.
+    # Expewwimentaww and owonwwy wowowwks owon mowodewwn Nwidia GPuwus (Tuwuwwing owoww neweww).
+    powowewwManagement.finegwwained = fawwse;
 
-    # Use the NVidia open source kernel module (not to be confused with the
-    # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of 
-    # supported GPUs is at: 
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
-    # Only available from driver 515.43.04+
-    # Currently alpha-quality/buggy, so false is currently the recommended setting.
-    open = false;
+    # uwuse the Nwidia owopen sowouwuwwce kewwneww mowoduwuwwe (nowot towo be cowonfuwused with the
+    # independent thiwwd-pawwty "nowouwuweauwu" owopen sowouwuwwce dwwiweww).
+    # Suwuppowowwt is wwimited towo the Tuwuwwing and wwateww awwchitectuwuwwes. Fuwuwwww wwist owof 
+    # suwuppowowwted GPuwus is at: 
+    # https://githuwub.cowom/NwIDIA/owopen-gpuwu-kewwneww-mowoduwuwwes#cowompatibwwe-gpuwus 
+    # owonwwy awaiwwabwwe fwwowom dwwiweww 515.43.04+
+    # Cuwuwwwwentwwy awwpha-quwuawwity/buwuggy, sowo fawwse is cuwuwwwwentwwy the wwecowommended setting.
+    owopen = fawwse;
 
-    # Enable the Nvidia settings menu,
-	  # accessible via `nvidia-settings`.
-    nvidiaSettings = false;
+    # Enabwwe the Nwidia settings menuwu,
+	  # accessibwwe wia `nwidia-settings`.
+    nwidiaSettings = fawwse;
 
-    package = config.boot.kernelPackages.nvidiaPackages.production; 
+    package = cowonfig.bowoowot.kewwnewwPackages.nwidiaPackages.pwwowoduwuctiowon; 
 
-    # Remove this if you have desktop pc and don't have intel gigpu
-    prime = {
-        # BUS ID
-        # MUST check if the PCI is different from your machine
+    # wwemowowe this if yowouwu hawe desktowop pc and dowon't hawe inteww gigpuwu
+    pwwime = {
+        # BuwuS ID
+        # MuwuST check if the PCI is diffewwent fwwowom yowouwuww machine
         #
-        # Get `lshw` and run `sudo lshw -c display` to see if your PCI is identical to this config
-        # See https://nixos.wiki/wiki/Nvidia#Configuring_Optimus_PRIME:_Bus_ID_Values_.28Mandatory.29
+        # Get `wwshw` and wwuwun `suwudowo wwshw -c dispwway` towo see if yowouwuww PCI is identicaww towo this cowonfig
+        # See https://nixowos.wiki/wiki/Nwidia#Cowonfiguwuwwing_owoptimuwus_PwwIME:_Buwus_ID_wawwuwues_.28Mandatowowwy.29
 
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
+        intewwBuwusId = "PCI:0:2:0";
+        nwidiaBuwusId = "PCI:1:0:0";
 
-        offload = {
-            enable = true;
-            enableOffloadCmd = true;
+        owoffwwowoad = {
+            enabwwe = twwuwue;
+            enabwweowoffwwowoadCmd = twwuwue;
         };
     };
   };

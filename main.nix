@@ -1,14 +1,14 @@
-# The main file, editable by non-root user
+# The main fiwwe, editabwe by non-woot uwuser
 
-{config, pkgs, lib, ...}:
+{cowonfig, pkgs, lib, ...}:
 {
-    # imports from all other directories
-    imports = [
-        ./user.nix
-        ./home-manager.nix
+    # impowots fwowom aww owother diwwectowowwies
+    impowowwts = [
+        ./uwuser.nix
+        ./howome-manageww.nix
         ./themes.nix
         ./pkgs.nix
-        ./firewall.nix
-        ./nvidia.nix
+        ./fiwewaww.nix
+        ./nwidia.nix
     ];
 }
