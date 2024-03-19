@@ -10,5 +10,6 @@
         ./pkgs.nix
         ./firewall.nix
         ./nvidia.nix
+        ./syncthing.nix
     ];
 }
