@@ -48,7 +48,8 @@ in
         zsh
         nodejs_20
         file # why is file not included by default????????????????????
-
+        mpv
+        yt-dlp
         # list of UNSTABLE packages 
         # I select unstable for youtube-music
         # just to remove an annoying insecure dependency (electron 24 is EOL smh)
