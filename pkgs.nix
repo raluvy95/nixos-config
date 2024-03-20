@@ -75,7 +75,7 @@ in
         status-area-horizontal-spacing
     ]);
 
-    # neeeded for appindicator idk
+    # needed for appindicator idk
     services.udev.packages = with pkgs; [
         gnome.gnome-settings-daemon
     ];
