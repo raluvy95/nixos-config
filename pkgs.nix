@@ -26,6 +26,11 @@ in
     programs.steam = {
         enable = true;
         dedicatedServer.openFirewall = false;
+        package = pkgs.steam.override {
+            extraLibraries = pkgs: with pkgs; [
+                glib-networking
+            ];
+        };
     };
     programs.nix-ld.enable = true;
     programs.zsh.enable = true;
