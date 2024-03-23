@@ -55,6 +55,14 @@ in
         file # why is file not included by default????????????????????
         mpv
         yt-dlp
+        chromium
+        fortune-kind
+        
+        # gnome and libadwaita apps
+        eyedropper
+        gnome-decoder
+        dialect
+
         # list of UNSTABLE packages 
         # I select unstable for youtube-music
         # just to remove an annoying insecure dependency (electron 24 is EOL smh)
@@ -78,6 +86,7 @@ in
         x11-gestures # because yes
         media-controls
         status-area-horizontal-spacing
+        color-picker
     ]);
 
     # needed for appindicator idk
