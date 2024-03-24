@@ -6,9 +6,6 @@
     # Home manager
     # Here lies the stuff you may need here
     home-manager.users.cat = { pkgs, ... }: {
-        home.packages = with pkgs; [
-            vscode
-        ];
 
         systemd.user.sessionVariables = config.home-manager.users.cat.home.sessionVariables;
         

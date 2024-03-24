@@ -39,6 +39,7 @@
 	  # accessible via `nvidia-settings`.
     nvidiaSettings = false;
 
+    # For some reasons, on NixOS 23.11 still installs v535 instead of 550
     package = config.boot.kernelPackages.nvidiaPackages.production; 
 
     # Remove this if you have desktop pc and don't have intel gigpu

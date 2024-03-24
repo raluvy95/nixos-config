@@ -9,11 +9,6 @@
         isNormalUser = true;
         description = "cat";
         extraGroups = ["networkmanager" "wheel"];
-        packages = with pkgs; [
-            firefox
-            telegram-desktop
-            thefuck
-        ];
     };
 
     users.defaultUserShell = pkgs.zsh;

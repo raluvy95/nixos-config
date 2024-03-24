@@ -27,7 +27,7 @@ in
         enable = true;
         dedicatedServer.openFirewall = false;
         package = pkgs.steam.override {
-            extraLibraries = pkgs: with pkgs; [
+            extraLibraries = p: with p; [
                 glib-networking
             ];
         };
@@ -41,27 +41,39 @@ in
     [
         # list of STABLE packages (23.11)
         adw-gtk3
-        krita
-        (discord.override {
-            withOpenASAR = true;
-        })
+
+        # libraries required to work
         libappindicator
         libappindicator-gtk2
-        git
-        btop
-        fastfetch
-        zsh
-        nodejs_20
-        file # why is file not included by default????????????????????
-        mpv
-        yt-dlp
-        chromium
-        fortune-kind
+        hunspell
         
         # gnome and libadwaita apps
         eyedropper
         gnome-decoder
         dialect
+
+        # cli/tui apps
+        btop
+        git
+        fastfetch
+        mpv
+        yt-dlp
+        thefuck
+        file
+        zsh
+        fortune-kind
+
+        # apps
+        vscode
+        chromium
+        nodejs_20
+        firefox
+        telegram-desktop
+        (discord.override {
+            withOpenASAR = true;
+        })
+        krita
+        libreoffice-still
 
         # list of UNSTABLE packages 
         # I select unstable for youtube-music
