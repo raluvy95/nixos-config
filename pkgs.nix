@@ -51,6 +51,7 @@ in
         eyedropper
         gnome-decoder
         dialect
+        cavalier
 
         # cli/tui apps
         btop
@@ -62,6 +63,7 @@ in
         file
         zsh
         fortune-kind
+        cava
 
         # apps
         vscode
@@ -74,6 +76,9 @@ in
         })
         krita
         libreoffice-still
+
+        # games
+        superTuxKart
 
         # list of UNSTABLE packages 
         # I select unstable for youtube-music
