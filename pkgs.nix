@@ -64,6 +64,7 @@ in
         zsh
         fortune-kind
         cava
+        mesa-demos
 
         # apps
         vscode
@@ -81,8 +82,8 @@ in
         superTuxKart
 
         # list of UNSTABLE packages 
-        # I select unstable for youtube-music
-        # just to remove an annoying insecure dependency (electron 24 is EOL smh)
+        # Unstable apps just to have latest version
+        # just to remove an annoying insecure dependency (electron smh)
         unstable.youtube-music
         unstable.prismlauncher-qt5
     ])
