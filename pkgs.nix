@@ -27,15 +27,6 @@ in
     programs.nix-ld.enable = true;
     programs.zsh.enable = true;
 
-    # firefox pwa support
-    programs.firefox = {
-        enable = true;
-        preferences = {
-            "widget.use-xdg-desktop-portal.file-picker" = 1;
-        };
-        nativeMessagingHosts.packages = [ unstable.firefoxpwa ];
-    };
-
     # All packages I need
     # May add more packages in near future
     environment.systemPackages = (with pkgs;
@@ -86,7 +77,6 @@ in
         # just to remove an annoying insecure dependency (electron smh)
         unstable.youtube-music
         unstable.prismlauncher-qt5
-        unstable.firefoxpwa
     ])
     # GNOME Extensions
     # Why do I have to go to gnome extensions to install
