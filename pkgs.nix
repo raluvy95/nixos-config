@@ -62,7 +62,6 @@ in
         chromium
         nodejs_20
         firefox
-        telegram-desktop
         (discord.override {
             withOpenASAR = true;
         })
