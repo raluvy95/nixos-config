@@ -62,9 +62,10 @@ in
         chromium
         nodejs_20
         firefox
-        (discord.override {
-            withOpenASAR = true;
-        })
+        discord
+        # (discord.override {
+        #     withOpenASAR = true;
+        # })
         krita
         libreoffice-still
 
