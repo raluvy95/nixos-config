@@ -56,6 +56,7 @@ in
         fortune-kind
         cava
         mesa-demos
+        appimage-run
 
         # apps
         vscode
@@ -88,6 +89,7 @@ in
         caffeine
         gsconnect
         appindicator
+        clipboard-indicator
         dash-to-dock
         vitals
         desktop-cube
