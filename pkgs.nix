@@ -57,6 +57,7 @@ in
         cava
         mesa-demos
         appimage-run
+        ffmpeg
 
         # apps
         vscode

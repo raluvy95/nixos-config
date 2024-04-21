@@ -17,10 +17,11 @@
       key = "  ";
       format = "{2}";
     }
-    {
-      type = "packages";
-      key = "  ";
-    }
+    # Packages takes forever to load (and probably freeze too)
+    # {
+    #   type = "packages";
+    #   key = "  ";
+    # }
     {
       type = "shell";
       key = "  ";
