@@ -78,7 +78,10 @@ in
         # Unstable apps just to have latest version
         # just to remove an annoying insecure dependency (electron smh)
         unstable.youtube-music
-        unstable.prismlauncher-qt5
+        unstable.prismlauncher
+
+        unstable.bun
+        unstable.quickemu
     ])
     # GNOME Extensions
     # Why do I have to go to gnome extensions to install
