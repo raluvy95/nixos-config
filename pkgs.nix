@@ -75,13 +75,22 @@ in
 
         # games
         superTuxKart
+
+        # Unstable apps
+        # gui apps
+        unstable.youtube-music
+        unstable.prismlauncher
+
+        # cli apps
+        unstable.bun
+        unstable.quickemu
     ])
     # GNOME Extensions
     # Why do I have to go to gnome extensions to install
     # when you have this kind declaratively :3
     ++ (with pkgs.gnomeExtensions;
     [
-        alphabetical-grid
+        alphabetical-app-grid
         extension-list
         gsconnect
         appindicator
@@ -94,19 +103,6 @@ in
         coverflow-alt-tab
         status-area-horizontal-spacing
         color-picker
-    ])
-    # list of UNSTABLE packages (rolling release)
-    # Yes, you can have both unstable and stable
-    # thanks to the design of nixpkgs
-    ++ (with pkgs.unstable;
-    [
-        # gui apps
-        youtube-music
-        prismlauncher
-
-        # cli apps
-        bun
-        quickemu
     ]);
 
     # needed for appindicator idk
