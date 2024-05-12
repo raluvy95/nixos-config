@@ -23,20 +23,22 @@ in
 
 
     # Enables program (aka setups everything after install for NixOS)
+    # Steam games from nixpkgs behaves a bit different. I'm using Steam flatpak now.
     programs.steam.enable = false;
     programs.nix-ld.enable = true;
     programs.zsh.enable = true;
 
     # All packages I need
     # May add more packages in near future
+    # list of STABLE packages (23.11)
     environment.systemPackages = (with pkgs;
     [
-        # list of STABLE packages (23.11)
         adw-gtk3
 
         # libraries required to work
         libappindicator
         hunspell
+        zulu8
         
         # gnome and libadwaita apps
         eyedropper
@@ -73,35 +75,38 @@ in
 
         # games
         superTuxKart
-
-        # list of UNSTABLE packages 
-        # Unstable apps just to have latest version
-        # just to remove an annoying insecure dependency (electron smh)
-        unstable.youtube-music
-        unstable.prismlauncher
-
-        unstable.bun
-        unstable.quickemu
     ])
     # GNOME Extensions
     # Why do I have to go to gnome extensions to install
     # when you have this kind declaratively :3
     ++ (with pkgs.gnomeExtensions;
     [
+        alphabetical-grid
         extension-list
-        blur-my-shell
-        caffeine
         gsconnect
         appindicator
         clipboard-indicator
         dash-to-dock
-        vitals
         desktop-cube
         window-is-ready-remover
         x11-gestures # because yes
         media-controls
+        coverflow-alt-tab
         status-area-horizontal-spacing
         color-picker
+    ])
+    # list of UNSTABLE packages (rolling release)
+    # Yes, you can have both unstable and stable
+    # thanks to the design of nixpkgs
+    ++ (with pkgs.unstable;
+    [
+        # gui apps
+        youtube-music
+        prismlauncher
+
+        # cli apps
+        bun
+        quickemu
     ]);
 
     # needed for appindicator idk
