@@ -92,7 +92,6 @@ in
     [
         alphabetical-app-grid
         extension-list
-        gsconnect
         appindicator
         clipboard-indicator
         dash-to-dock
