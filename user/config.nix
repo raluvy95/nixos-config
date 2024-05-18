@@ -9,7 +9,8 @@ let
 in
 {
     "${homeConfig}fastfetch/config.jsonc".text = builtins.toJSON fastfetch;
-    # "firefox-gnome-theme" = {
-        
-    # }
+    "firefox-gnome-theme" = {
+        target = ".mozilla/firefox/homeconfig/chrome/firefox-gnome-theme";
+        source = (fetchTarball "https://github.com/rafaelmardojai/firefox-gnome-theme/archive/master.tar.gz");
+    };
 }
