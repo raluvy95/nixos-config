@@ -10,23 +10,20 @@ in
         allowUnfree = true;
     };
 
-    services.touchegg.enable = true;
+    programs = {
+        steam.enable = false;
 
-    services.flatpak.enable = true;
+        # Enable LD for third-party installation (such as steam flatpak)
+        nix-ld.enable = true;
 
-    # required by some flatpak apps
-    services.dbus = {
-        enable = true;
-        implementation = "broker";
+        # ZSH shell
+        zsh.enable = true;
     };
+    
+    services = import ./services.nix pkgs;
+
     xdg.portal.enable = true;
 
-
-    # Enables program (aka setups everything after install for NixOS)
-    # Steam games from nixpkgs behaves a bit different. I'm using Steam flatpak now.
-    programs.steam.enable = false;
-    programs.nix-ld.enable = true;
-    programs.zsh.enable = true;
 
     # All packages I need
     # May add more packages in near future
@@ -103,16 +100,6 @@ in
         status-area-horizontal-spacing
         color-picker
     ]);
-
-    # needed for appindicator idk
-    services.udev.packages = with pkgs; [
-        gnome.gnome-settings-daemon
-    ];
-
-    services.xserver.excludePackages = with pkgs; [
-        # idk I don't need xterm
-        xterm
-    ];
 
     # Useless packages for me
     environment.gnome.excludePackages = (with pkgs; [

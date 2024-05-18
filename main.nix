@@ -4,12 +4,12 @@
 {
     # imports from all other directories
     imports = [
-        ./user.nix
-        ./home-manager.nix
-        ./themes.nix
-        ./pkgs.nix
-        ./firewall.nix
-        ./nvidia.nix
-        ./syncthing.nix
+        ./user/home-manager.nix
+        ./software/themes.nix
+        ./software/pkgs.nix
+        ./software/syncthing.nix
+        ./system/firewall.nix
+        ./system/nvidia.nix
+        ./system/user.nix
     ];
 }

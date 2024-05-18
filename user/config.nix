@@ -9,4 +9,7 @@ let
 in
 {
     "${homeConfig}fastfetch/config.jsonc".text = builtins.toJSON fastfetch;
+    # "firefox-gnome-theme" = {
+        
+    # }
 }
