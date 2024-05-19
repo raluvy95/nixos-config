@@ -57,6 +57,11 @@
                 "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
                 "browser.tabs.drawInTitlebar" = true;
                 "svg.context-properties.content.enabled" = true;
+                "mozilla.widget.use-argb-visuals" = true;
+
+                "gnomeTheme.hideSingleTab" = true;
+                "gnomeTheme.normalWidthTabs" = true;
+                "gnomeTheme.hideWebrtcIndicator" = true;
             };
             userChrome = ''
             @import "firefox-gnome-theme/userChrome.css";
