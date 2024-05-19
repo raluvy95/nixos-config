@@ -50,6 +50,7 @@
     firefox = {
         enable = true;
         profiles.homeconfig = {
+            search.privateDefault = "DuckDuckGo";
             name = "Default managed by home-manager";
             settings = {
                 "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
@@ -67,6 +68,37 @@
             @import "firefox-gnome-theme/userChrome.css";
             @import "firefox-gnome-theme/theme/colors/dark.css";
             '';
+            userContent = ''
+            @-moz-document url("about:newtab"), url("about:home"){
+                body{
+                    /* This will load image.jpg stored in the same folder as this file */
+                    background-image: url("background.jpg") !important;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-position-x: center;
+                    background-position-y: bottom;
+                }
+            }
+            '';
+        };
+    };
+
+    cava = {
+        enable = true;
+        settings = {
+            general.framerate = 30;
+            input.method = "pipewire";
+            smoothing = {
+                noise_reduction = 88;
+                monstercat = 25;
+            };
+            color = {
+                gradience = 0;
+                gradience_count = 2;
+                gradience_color_1 = "'#438de6'";
+                gradience_color_2 = "'#ffffff'";
+            };
         };
     };
 }
