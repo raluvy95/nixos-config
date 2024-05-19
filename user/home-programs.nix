@@ -69,9 +69,8 @@
             @import "firefox-gnome-theme/theme/colors/dark.css";
             '';
             userContent = ''
-            @-moz-document url("about:newtab"), url("about:home"){
-                body{
-                    /* This will load image.jpg stored in the same folder as this file */
+            @-moz-document url("about:newtab"), url("about:home") {
+                body {
                     background-image: url("background.jpg") !important;
                     background-size: cover;
                     background-repeat: no-repeat;
