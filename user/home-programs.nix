@@ -50,7 +50,6 @@
     firefox = {
         enable = true;
         profiles.homeconfig = {
-            search.privateDefault = "DuckDuckGo";
             name = "Default managed by home-manager";
             settings = {
                 "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
@@ -67,18 +66,6 @@
             userChrome = ''
             @import "firefox-gnome-theme/userChrome.css";
             @import "firefox-gnome-theme/theme/colors/dark.css";
-            '';
-            userContent = ''
-            @-moz-document url("about:newtab"), url("about:home") {
-                body {
-                    background-image: url("background.jpg") !important;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    background-position-x: center;
-                    background-position-y: bottom;
-                }
-            }
             '';
         };
     };
