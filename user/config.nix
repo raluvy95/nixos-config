@@ -13,8 +13,4 @@ in
         target = ".mozilla/firefox/homeconfig/chrome/firefox-gnome-theme";
         source = (fetchTarball "https://github.com/rafaelmardojai/firefox-gnome-theme/archive/master.tar.gz");
     };
-    "firefox-content-background" = {
-        target = ".mozilla/firefox/homeconfig/chrome/background.jpg";
-        source = ./../assets/background.jpg;
-    };
 }
