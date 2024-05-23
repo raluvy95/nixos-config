@@ -17,6 +17,7 @@
             "org/gnome/desktop/interface" = {
                 color-schene = "prefer-dark";
                 clock-show-seconds = true;
+                gtk-theme = "adw-gtk3-dark";
             };
         };
 

@@ -99,6 +99,7 @@ in
         coverflow-alt-tab
         status-area-horizontal-spacing
         color-picker
+        user-themes
     ]);
 
     # Useless packages for me
