@@ -57,6 +57,7 @@ in
         mesa-demos
         appimage-run
         ffmpeg
+        bat
 
         # apps
         vscode

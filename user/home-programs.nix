@@ -16,7 +16,8 @@
         shellAliases = {
             yt-music = "yt-dlp -x --audio-format mp3 --embed-metadata --embed-thumbnail";
             nixos-update = "sudo nixos-rebuild switch";
-                nixos-test = "sudo nixos-rebuild test";
+            nixos-test = "sudo nixos-rebuild test";
+            cat = "bat";
         };
 
         oh-my-zsh = {
