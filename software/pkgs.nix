@@ -103,6 +103,7 @@ in
         user-themes
         quick-settings-tweaker
         just-perfection
+        internet-speed-monitor
     ]);
 
     # Useless packages for me
