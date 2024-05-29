@@ -101,6 +101,8 @@ in
         status-area-horizontal-spacing
         color-picker
         user-themes
+        quick-settings-tweaker
+        just-perfection
     ]);
 
     # Useless packages for me
