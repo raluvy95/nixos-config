@@ -103,6 +103,9 @@ in
         user-themes
         quick-settings-tweaker
         just-perfection
+        top-bar-organizer
+        window-title-is-back
+        blur-my-shell
     ]);
 
     # Useless packages for me
