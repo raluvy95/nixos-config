@@ -39,10 +39,10 @@
 	  # accessible via `nvidia-settings`.
     nvidiaSettings = false;
 
-    # For some reasons, on NixOS 23.11 still installs v535 instead of 550
-    package = config.boot.kernelPackages.nvidiaPackages.production; 
+    # This installs 550
+    package = config.boot.kernelPackages.nvidiaPackages.stable; 
 
-    # Remove this if you have desktop pc and don't have intel gigpu
+    # Remove this if you have desktop pc and don't have intel igpu
     prime = {
         # BUS ID
         # MUST check if the PCI is different from your machine

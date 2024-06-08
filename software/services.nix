@@ -12,8 +12,15 @@
         pkgs.gnome.gnome-settings-daemon
     ];
 
-    xserver.excludePackages = with pkgs; [
-        # I don't need xterm
-        xterm
-    ];
+    # I don't have a working printer
+    printing.enable = false;
+
+    # Configure keymap in X11
+    xserver = {
+        xkb.layout = "us";
+        xkb.variant = "";
+        excludePackages = with pkgs; [
+            xterm
+        ];
+    };
 }

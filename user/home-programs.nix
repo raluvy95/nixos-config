@@ -10,7 +10,7 @@
     zsh = {
         enable = true;
         enableCompletion = true;
-        enableAutosuggestions = true;
+        autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
 
         shellAliases = {
@@ -53,8 +53,6 @@
         profiles.homeconfig = {
             name = "Default managed by home-manager";
             settings = {
-                "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
-
                 "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
                 "browser.tabs.drawInTitlebar" = true;
                 "svg.context-properties.content.enabled" = true;

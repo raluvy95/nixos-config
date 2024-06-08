@@ -101,11 +101,13 @@ in
         status-area-horizontal-spacing
         color-picker
         user-themes
-        quick-settings-tweaker
         just-perfection
-        top-bar-organizer
-        window-title-is-back
         blur-my-shell
+
+        # Didn't update to be usable on GNOME 46 (gnome moment)
+        # quick-settings-tweaker
+        # top-bar-organizer
+        # window-title-is-back
     ]);
 
     # Useless packages for me
