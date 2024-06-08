@@ -50,22 +50,24 @@
 
     firefox = {
         enable = true;
-        profiles.homeconfig = {
-            name = "Default managed by home-manager";
-            settings = {
-                "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-                "browser.tabs.drawInTitlebar" = true;
-                "svg.context-properties.content.enabled" = true;
-                "mozilla.widget.use-argb-visuals" = true;
+        profiles = {
+            homeconfig = {
+                name = "Default managed by home-manager";
+                settings = {
+                    "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+                    "browser.tabs.drawInTitlebar" = true;
+                    "svg.context-properties.content.enabled" = true;
+                    "mozilla.widget.use-argb-visuals" = true;
 
-                "gnomeTheme.hideSingleTab" = true;
-                "gnomeTheme.normalWidthTabs" = true;
-                "gnomeTheme.hideWebrtcIndicator" = true;
+                    "gnomeTheme.hideSingleTab" = true;
+                    "gnomeTheme.normalWidthTabs" = true;
+                    "gnomeTheme.hideWebrtcIndicator" = true;
+                };
+                userChrome = ''
+                @import "firefox-gnome-theme/userChrome.css";
+                @import "firefox-gnome-theme/theme/colors/dark.css";
+                '';
             };
-            userChrome = ''
-            @import "firefox-gnome-theme/userChrome.css";
-            @import "firefox-gnome-theme/theme/colors/dark.css";
-            '';
         };
     };
 

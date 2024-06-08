@@ -94,7 +94,6 @@ in
         clipboard-indicator
         dash-to-dock
         desktop-cube
-        window-is-ready-remover
         x11-gestures # because yes
         media-controls
         coverflow-alt-tab
@@ -103,11 +102,12 @@ in
         user-themes
         just-perfection
         blur-my-shell
+        window-title-is-back
 
         # Didn't update to be usable on GNOME 46 (gnome moment)
         # quick-settings-tweaker
         # top-bar-organizer
-        # window-title-is-back
+        # window-is-ready-remover
     ]);
 
     # Useless packages for me
@@ -116,7 +116,7 @@ in
     ]) ++ (with pkgs.gnome; [
         gnome-music
         epiphany
-        geary
+        # geary
     ]);
 
     fonts = {
