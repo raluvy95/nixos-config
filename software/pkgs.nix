@@ -116,7 +116,7 @@ in
     ]) ++ (with pkgs.gnome; [
         gnome-music
         epiphany
-        # geary
+        geary
     ]);
 
     fonts = {
