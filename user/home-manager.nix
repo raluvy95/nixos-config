@@ -25,6 +25,15 @@
 
         # More configurations can be found in config.nix
         home.file = import ./config.nix;
+        
+        # This does not build
+        # gtk = {
+        #     enable = true;
+        #     iconTheme = {
+        #         name = "Qogir Icon Theme";
+        #         package = pkgs.qogir-icon-theme;
+        #     };
+        # };
     };
 
     # idk what to do
