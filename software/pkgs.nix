@@ -31,6 +31,7 @@ in
     environment.systemPackages = (with pkgs;
     [
         adw-gtk3
+        morewaita-icon-theme
 
         # libraries required to work
         libappindicator
@@ -70,6 +71,7 @@ in
         # })
         krita
         libreoffice-still
+        gnome.gnome-tweaks
 
         # games
         superTuxKart

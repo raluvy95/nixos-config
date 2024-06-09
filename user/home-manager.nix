@@ -18,6 +18,7 @@
                 color-schene = "prefer-dark";
                 clock-show-seconds = true;
                 gtk-theme = "adw-gtk3-dark";
+                icon-theme = "MoreWaita";
             };
         };
 
@@ -25,17 +26,9 @@
 
         # More configurations can be found in config.nix
         home.file = import ./config.nix;
-        
-        # This does not build
-        # gtk = {
-        #     enable = true;
-        #     iconTheme = {
-        #         name = "Qogir Icon Theme";
-        #         package = pkgs.qogir-icon-theme;
-        #     };
-        # };
     };
 
     # idk what to do
     home-manager.useGlobalPkgs = true;
+    home-manager.backupFileExtension = "backup";
 }
