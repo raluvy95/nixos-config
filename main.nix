@@ -11,5 +11,6 @@
         ./system/firewall.nix
         ./system/nvidia.nix
         ./system/user.nix
+        ./system/flatpak-cursor-fix.nix
     ];
 }
