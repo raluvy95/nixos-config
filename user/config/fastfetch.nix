@@ -17,11 +17,10 @@
       key = "  ";
       format = "{2}";
     }
-    # Packages takes forever to load (and probably freeze too)
-    # {
-    #   type = "packages";
-    #   key = "  ";
-    # }
+    {
+      type = "packages";
+      key = "  ";
+    }
     {
       type = "shell";
       key = "  ";
@@ -81,5 +80,11 @@
     showErrors = true;
     separator = "  ";
     color = "blue";
+  };
+  logo = {
+    color = {
+      "1" = "36";
+      "2" = "34";
+    }
   };
 }
