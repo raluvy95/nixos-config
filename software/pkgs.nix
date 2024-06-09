@@ -101,11 +101,11 @@ in
         coverflow-alt-tab
         status-area-horizontal-spacing
         color-picker
-        user-themes
+        # user-themes
         just-perfection
         blur-my-shell
-        compiz-windows-effect
-
+        burn-my-windows
+        
         # Didn't update to be usable on GNOME 46 (gnome moment)
         # quick-settings-tweaker
         # top-bar-organizer
