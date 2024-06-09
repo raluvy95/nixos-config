@@ -104,7 +104,7 @@ in
         user-themes
         just-perfection
         blur-my-shell
-        window-title-is-back
+        compiz-windows-effect
 
         # Didn't update to be usable on GNOME 46 (gnome moment)
         # quick-settings-tweaker
