@@ -11,7 +11,7 @@
         aggregated = pkgs.buildEnv {
             name = "system-fonts-and-icons";
             paths = with pkgs; [
-                gnome.adwaita-icon-theme
+                morewaita-icon-theme
 
                 noto-fonts
                 noto-fonts-emoji
