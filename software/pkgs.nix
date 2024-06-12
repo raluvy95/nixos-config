@@ -59,6 +59,7 @@ in
         appimage-run
         ffmpeg
         bat
+        kitty
 
         # apps
         vscode
