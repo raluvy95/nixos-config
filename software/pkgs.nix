@@ -78,7 +78,6 @@ in
 
         # Unstable apps
         # gui apps
-        unstable.youtube-music
         unstable.prismlauncher
 
         # cli apps
