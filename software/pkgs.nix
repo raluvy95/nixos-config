@@ -72,6 +72,7 @@ in
         krita
         libreoffice-still
         gnome.gnome-tweaks
+        blackbox-terminal
 
         # games
         superTuxKart
