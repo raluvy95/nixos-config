@@ -1,3 +1,5 @@
+I no longer keep this repo maintained since I switched to different distro. NixOS is great but it's very annoying when you have to deal with FHS enviornment. I may return back in the future. Not sure when.
+
 # CatNowBlue's NixOS configuration
 
 NixOS vanilla plus home manager config, including NVIDIA proprietary driver plus OPTIMUS Prime functionality.
